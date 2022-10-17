@@ -1,4 +1,4 @@
-
+package org.example.parttwo;
 //Game.java
 import java.io.*;
 
@@ -12,7 +12,6 @@ public class Game implements Constants {
 	 */
     public Game( ) {
         theBoard  = new Board();
-
 	}
     
     /**
