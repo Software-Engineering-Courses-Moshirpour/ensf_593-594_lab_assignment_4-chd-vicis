@@ -31,6 +31,8 @@ public class Geometry {
     }
 
     public static void main(String[] args) {
+        System.out.println("\nAdding Rectangle, Circle, and Prism objects to the list... ");
+        System.out.println("\nShowing information about objects added to the list:");
         Rectangle r1 = new Rectangle(3.0, 4.0, 5.0, 6.0, "R1", new Colour("Black"));
         Circle c1 = new Circle(13.0, 14.0, 15.0, "C1", new Colour("Green"));
         System.out.println(r1);
@@ -47,7 +49,7 @@ public class Geometry {
         System.out.println(p2);
 
         Geometry demo = new Geometry();
-        System.out.println("\nAdding Rectangle, Circle, and Prism objects to the list... ");
+        
         demo.add(r1);
         demo.add(r2);
         demo.add(c1);
@@ -55,7 +57,7 @@ public class Geometry {
         demo.add(p1);
         demo.add(p2);
 
-        System.out.println("\nShowing information about objects added to the list:");
+        
         demo.showAll();
 
         System.out.println("\nShowing area, perimeter, and volume of objects in the list:");
