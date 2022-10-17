@@ -1,49 +1,50 @@
 package org.example.partone;
 
-abstract class Shape implements Comparable<Shape>{
+abstract class Shape implements Comparable<Shape> {
 	protected Point origin;
 	protected Text name;
+
 	abstract protected Double area();
+
 	abstract protected Double perimeter();
+
 	abstract protected Double volume();
-	
-	protected Shape(Double x_origin, Double y_origin, String name, Colour colour){
-		
-		origin = new Point(x_origin,y_origin, colour);
+
+	protected Shape(Double x_origin, Double y_origin, String name, Colour colour) {
+
+		origin = new Point(x_origin, y_origin, colour);
 		this.name = new Text(name);
 	}
 
-	protected Point  getOrigin()   {
+	protected Point getOrigin() {
 		return origin;
 	}
-	
-	protected String  getName()   {
+
+	protected String getName() {
 		return name.getText();
 	}
 
-    public int compareTo(Shape other){
-        return name.getText().compareTo(other.name.getText());
-    }
-	
-	protected  Double distance(   Shape  other){
+	public int compareTo(Shape other) {
+		return name.getText().compareTo(other.name.getText());
+	}
+
+	protected Double distance(Shape other) {
 		return origin.distance(other.origin);
 	}
-	
-	protected Double  distance(Shape a, Shape  b){
+
+	protected Double distance(Shape a, Shape b) {
 		return Point.distance(a.origin, b.origin);
 	}
-	
-	
-	protected void  move(Double dx, Double dy){
-		origin.setx(origin.getx()+dx);
-		origin.sety(origin.gety()+dy);
+
+	protected void move(Double dx, Double dy) {
+		origin.setx(origin.getx() + dx);
+		origin.sety(origin.gety() + dy);
 	}
-	
+
 	@Override
-	public String toString(){
+	public String toString() {
 		String s = "\nShape name: " + name + "\nOrigin: " + origin;
 		return s;
 	}
 
 }
-

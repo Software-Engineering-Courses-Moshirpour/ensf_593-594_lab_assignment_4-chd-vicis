@@ -1,20 +1,18 @@
 package org.example.partone;
 
-class Colour
-{
-    private String colour;
-    
+class Colour {
+	private String colour;
+
 	public Colour(String s) {
 		colour = new String(s);
 	}
 
+	public void setColour(String newColour) {
+		colour = newColour;
+	}
 
-    public void setColour(String newColour){
-    	colour = newColour;
-    }
-    
 	@Override
-	public String toString(){
+	public String toString() {
 		return colour;
 	}
 
